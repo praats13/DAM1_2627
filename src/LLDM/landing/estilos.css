@@ -1,0 +1,42 @@
+/*
+h1 {
+    color: blueviolet;
+    font-size: 50px;
+}
+
+p {
+    color: rosybrown;
+    background-color: antiquewhite;
+    font-size: 18px;
+    text-align: center;
+    padding: 13px; /*espacio interior entre contenido y lado
+    margin: 11px; /*espacio exterior fuera del lado
+    border: 2px solid rgb(243, 207, 160);
+    
+    width // height --> ancho y altura
+
+}
+*/
+
+/*ROOT + VARIABLES REUTILIZADAS*/
+/*root es como un almacen de valores que usamos en diversos sitios del css.
+se llaman con var(--nombre).
+
+ventaja --> colores corporativos, podemos cambiar el color a la variable y se cambiara a todos los elementos que la usen
+*/
+
+:root{
+    --color-primario: blueviolet;
+    --bg-color: antiquewhite;
+}
+table{
+    border: 1px solid var(--color-primario);
+}
+/*SELECTOR UNIVERSAL*/
+/*quiere decir todos los elementos de la pagina sin excepcion.
+es el selector con menos prioridad de todos.
+
+*{
+    color: red;
+}
+*/
