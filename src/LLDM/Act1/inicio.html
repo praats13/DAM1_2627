@@ -1,0 +1,268 @@
+<!DOCTYPE html> <!-- comentario -->
+<html lang="es"> <!-- en esta linea defino el idioma -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicacions classe</title> <!-- La etiqueta title sale en la pestaña del navegador -->
+</head>
+
+<body>
+    <header> <!-- ALT + MAYUS + F -->
+        <!-- Títulos de diferentes niveles -->
+        <!-- h1 heading mas importante -->
+        <!-- h6 heading menos importante -->
+        <h1>This is Heading 1</h1> <!-- etiqueta título -->
+        <h2 style="font-size: 50px;">This is Heading 2</h2>
+        <h3>This is Heading 3</h3>
+        <h4>This is Heading 4</h4>
+        <h5>This is Heading 5</h5>
+        <h6>This is Heading 6</h6>
+
+        <!-- El tag nav define un set de links de navegación -->
+        <nav>
+            <a href="https://www.ilerna.es/" target="_blank"> WEB ILERNA </a>
+            <!-- target especifica cómo se abre el enlace -->
+            <br> <!-- Inserta saltos de línea -->
+            <a href="mailto:ejemplo@gmail.com"> ENVIAR MAIL</a>
+            <br>
+            <a href="#hero"> HERO SECTION </a>
+            <br>
+            <a href="#listas"> LISTAS SECTION </a>
+            <br>
+            <a href="tel:+34973000000"> LLÁMANOS</a>
+            <br>
+            <a href="img/creating a job.pdf" download="creating a job ad 2.pdf" target="_blank">Descargar documento</a>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h2>WWF History</h2>
+            <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the
+                conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF
+                was founded in 1961.</p> <!-- p define un párrafo -->
+
+            <h2>Introducción</h2>
+            <!--Imagen con link-->
+            <a href="https://www.ilerna.com" target="_blank" title="Ir a la web de iLERNA">
+                <img src="img/Logo_ILERNA-01.png" alt="Logotipo de iLERNA" width="250" height="auto">
+            </a>
+
+
+        </section>
+        <section id="listas">
+            <!-- tipos de listas, Ordenadas (ol) y Desordenadas (ul)-->
+            <h2>Listas</h2>
+            <h3>Listas desordenadas y multinivel</h3>
+            <ul>
+                <li>Primero</li>
+                <li>Segundo</li>
+                <ul>
+                    <li>PRIMER ITEM</li>
+                    <LI>SEGUNDO ITEM</LI>
+                </ul>
+                <ul>
+                    <li>Sublista desordenada</li>
+                </ul>
+            </ul>
+            <h3>LISTAS DE DEFINICIÓN</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcas para la creación de páginas web</dd>
+                <dt>CSS</dt>
+                <dd>Lenguaje para definir la presentación/diseño de un HTML</dd>
+            </dl>
+            <ol type="I"> <!-- Lista ordenada con numeración romada-->
+                <li>Primer paso</li>
+                <li>Segundo paso</li>
+                <li>Tercer paso</li>
+            </ol>
+            <ol type="A"> <!-- Lista ordenada con numeración romada-->
+                <li>Primer paso</li>
+                <li>Segundo paso</li>
+                <li>Tercer paso</li>
+            </ol>
+            <!--Para cambiar el estilo de los items en una lista desordenada (ul) se tiene que hacer en CSS-->
+        </section>
+        <section id="tablas">
+            <table>
+                <thead>
+                    <tr> <!-- COLUMNA -->
+                        <th> HTML</th> <!-- FILA -->
+                        <th> CSS</th> <!--TH PARA HEADER-->
+                        <th> JS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2"> Lenguage de marcas</td> <!-- TD PARA BODY-->
+                        <td> Lenguage de hojas de estilos</td>
+                        <td> Lenguage de guiones</td>
+                    </tr>
+                    <tr>
+                        <td> ..... </td>
+                        <td> ..... </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"> Ocupa las 3 columnas</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table border="s">
+                <thead>
+                    <tr>
+                        <th>Hores</th>
+                        <th>Dilluns</th>
+                        <th>Dimarts</th>
+                        <th>Dimecres</th>
+                        <th>Dijous</th>
+                        <th>Divendres</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15:00 - 15:55</td>
+                        <td>Anglès</td>
+                        <td>Programació</td>
+                        <td>IPO I</td>
+                        <td>IPO I</td>
+                        <td>Sostenibilitat</td>
+                    </tr>
+                    <tr>
+                        <td>15:55 - 16:50</td>
+                        <td>Anglès</td>
+                        <td>Programació</td>
+                        <td>SIST.INF</td>
+                        <td>IPO I</td>
+                        <td>Programació</td>
+                    </tr>
+                    <tr>
+                        <td>16:50 - 17:45</td>
+                        <td>LLM-i-SGI</td>
+                        <td>LLM-i-SGI</td>
+                        <td>Digitalització</td>
+                        <td>BD</td>
+                        <td>Programació</td>
+                    </tr>
+                    <tr>
+                        <td>18:15 - 19:10</td>
+                        <td>ENT.DES</td>
+                        <td>SIST.INF</td>
+                        <td>Programació</td>
+                        <td>Tutoria</td>
+                        <td>BD</td>
+                    </tr>
+                    <tr>
+                        <td>19:10 - 20:05</td>
+                        <td>ENT.DES</td>
+                        <td>SIST.INF</td>
+                        <td>BD</td>
+                        <td>Programació</td>
+                        <td>BD</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </section>
+        <section id="formularis">
+            <h2>FORMULARIS</h2>
+            <form action="/enviar" method="post"> <!--action es donde se envian los datos-->
+                <fieldset> <!--agrupa campos relacionados-->
+                    <legend> DATOS PERSONALES</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required><br>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" name="email" id="email" placeholder="Escribe tu email" required><br>
+
+                    <label for="nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="nacimiento" name="nacimiento" required><br>
+                </fieldset>
+                <fieldset>
+                    <legend>PREFERENCIAS</legend>
+                    <p>Deporte favorito</p>
+
+                    <input type="radio" name="deporte" id="futbol" value="futbol" checked>
+                    <label for="futbol">Futbol</label>
+
+                    <input type="radio" name="deporte" id="baloncesto" value="baloncesto">
+                    <label for="futbol">Baloncesto</label> <br>
+
+                    <label for="ciudad">Ciudad:</label>
+                    <select>
+                        <optgroup label="Provincia de Lleida">
+                            <option value="lleida">Lleida</option>
+                            <option value="almenar">Almenar</option>
+                            <option value="alfarras">Alfarràs</option>
+                        </optgroup>
+                        <optgroup label="Provincia de Barcelona">
+                            <option value="barcelona">Barcelona</option>
+                            <option value="sant cugat">Sant Cugat</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="comentario">Comentarios:</label><br>
+                    <textarea name="comentario" id="comentario" rows="4" cols="30"
+                        placeholder="Escribe aquí tu comentario"></textarea><br>
+
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Acepto las condiciones</label><br>
+
+                    <button type="submit">Enviar</button>
+                    <input type="reset" value="borrar">
+                </fieldset>
+            </form>
+        </section>
+        <section id="citar">
+            <h2>CITAR CONTENIDO</h2>
+            <blockquote cite="https://www.ilerna.com">CITA DE LA WEB DE ILERNA</blockquote>
+        </section>
+        <section id="iframes">
+            <h2>IFRAMES</h2>
+            <iframe width="560px" height="315px" src="https://www.ilerna.com" frameborder="0"></iframe>
+        </section>
+        <section id="pictures">
+            <h2>PICTURES / FALLBACK</h2>
+            <picture>
+                <figcaption>Fig1. Logo de iLERNA</figcaption>
+                <source srcset="img/Logo_ILERNA-01.avif" type="image/avif">
+                <source srcset="img/Logo_ILERNA-01.webp" type="image/webp">
+                <img src="img/Logo_ILERNA-01.png" alt="Logo iLERNA">
+            </picture>
+        </section>
+        <section id="video">
+            <h2>Video</h2>
+            <video src="img/12415205_1920_1080_30fps.mp4" width="500px" height="auto" controls autoplay muted loop
+                poster="img/Logo_ILERNA-01.png">
+                <track kind="subtitles" src="archivo.vtt" srclang="ES" label="subtitles">
+                </track> <!--en <src="archivo.vtt">  en .vtt representa un archivo de subtítulos-->
+                <p>tu navegador no soporta la etiqueta video</p>
+            </video>
+        </section>
+
+        <!--CONTENIDO DESPLEGABLE CON HTML5-->
+        <section id="details">
+            <details open>
+                <summary>Que es el DOM?</summary>
+                <p>El DOM (Document Object Model) es la representación en árbol que hace el navegador de la página HTML,
+                    y que permite acceder y modificarla con JavaScript.</p>
+            </details>
+        </section>
+        <section>
+            <h2>Audio</h2>
+            <!--la etiqueta audio no tiene ni atributo width/height ni poster (no hay imagen a mostrar)-->
+            <source src="asdf.ogg" type="audio/ogg">
+            <audio src="asdf.mp3" controls>
+                <p>tu navegador no soporta la etiqueta audio</p>
+            </audio><!--puedo tener controles autoplay, muted, loop...-->
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -34,9 +34,24 @@ table{
 }
 /*SELECTOR UNIVERSAL*/
 /*quiere decir todos los elementos de la pagina sin excepcion.
-es el selector con menos prioridad de todos.
+es el selector con menos prioridad de todos.*/
 
 *{
     color: red;
 }
-*/
+
+
+p{
+    color: blue;
+}
+table, th, td{
+    border: 1px solid palevioletred;
+}
+.serveis{
+    border: 2px solid var(--color-primario);
+}
+.card{
+    border: 2px solid turquoise;
+    margin: 20px;
+    padding: 20px;
+}

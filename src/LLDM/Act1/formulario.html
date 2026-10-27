@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h2>Formulario</h2>
+
+    <form action="/enviar" method="post">
+        <fieldset>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" placeholder="Escribe tu email" required><br>
+
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento" required><br>
+            <p>Deporte favorito</p>
+
+            <input type="radio" name="deporte" id="futbol" value="futbol" checked>
+            <label for="futbol">Futbol</label>
+
+            <input type="radio" name="deporte" id="baloncesto" value="baloncesto">
+            <label for="futbol">Baloncesto</label> <br>
+
+            <label for="ciudad">Ciudad:</label>
+            <select>
+                <optgroup label="Provincia de Lleida">
+                    <option value="lleida">Lleida</option>
+                    <option value="almenar">Almenar</option>
+                    <option value="alfarras">Alfarràs</option>
+                </optgroup>
+                <optgroup label="Provincia de Barcelona">
+                    <option value="barcelona">Barcelona</option>
+                    <option value="sant cugat">Sant Cugat</option>
+                </optgroup>
+            </select>
+            <br>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
