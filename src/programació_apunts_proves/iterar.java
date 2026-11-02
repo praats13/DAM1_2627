@@ -1,26 +1,24 @@
 package programació_apunts_proves;
 
+import java.util.Scanner;
+
 public class iterar {
 
 	public static void main(String[] args) {
-		
-		String palabra = "Hola";
-		
-		/*System.out.println(palabra);
-		System.out.println(palabra.toUpperCase());
-		System.out.println(palabra.toLowerCase());
-		
-		palabra = palabra.toUpperCase();
-		System.out.println(palabra);
-		System.out.println(palabra);
-		System.out.println(palabra);
-		
-		System.out.println(palabra.length());
-		
-		System.out.println(palabra.charAt(0));
-		System.out.println(palabra.charAt(1));
-		System.out.println(palabra.charAt(2));
-		System.out.println(palabra.charAt(3));*/
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Introduce una o más palabras");
+		String palabra = scan.nextLine();
+
+		for (int i = 0; i < palabra.length(); i++) {
+
+			palabra = palabra.toUpperCase();
+			char letra = palabra.charAt(i);
+
+			System.out.println(letra);
+		}
+		scan.close();
 	}
 
 }
