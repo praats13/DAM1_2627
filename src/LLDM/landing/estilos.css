@@ -25,33 +25,58 @@ se llaman con var(--nombre).
 ventaja --> colores corporativos, podemos cambiar el color a la variable y se cambiara a todos los elementos que la usen
 */
 
-:root{
+:root {
     --color-primario: blueviolet;
     --bg-color: antiquewhite;
 }
-table{
+
+table {
     border: 1px solid var(--color-primario);
 }
+
 /*SELECTOR UNIVERSAL*/
 /*quiere decir todos los elementos de la pagina sin excepcion.
 es el selector con menos prioridad de todos.*/
 
-*{
+* {
     color: red;
 }
 
 
-p{
+p {
     color: blue;
 }
-table, th, td{
+
+table,
+th,
+td {
     border: 1px solid palevioletred;
 }
-.serveis{
+
+.serveis {
     border: 2px solid var(--color-primario);
 }
-.card{
+
+.card {
     border: 2px solid turquoise;
     margin: 20px;
     padding: 20px;
+}
+
+div {
+    color: rgb(207, 151, 112);
+    background-color: cornflowerblue;
+}
+
+main p {
+    color: var(--color-primario);
+
+}
+
+main>section>article>p {
+    color: fuchsia;
+}
+
+h1+nav {
+    border-top: 2px solid var(--bg-color);
 }

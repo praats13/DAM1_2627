@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- html con lang="es" porque la página está escrita en castellano (ayuda a lectores de pantalla y buscadores) -->
 <html lang="es">
+
 <head>
   <!-- charset UTF-8 para ver bien tildes y ñ -->
   <meta charset="UTF-8">
@@ -31,12 +32,14 @@
   <link rel="stylesheet" href="estilos.css">
 
 </head>
+
 <body>
 
   <!-- header, main y footer: los tres bloques principales, en este orden -->
   <header>
     <!-- el logotipo es un enlace al propio fichero, así la página se recarga al pulsarlo -->
-    <a href="landing.html" title="Volver al inicio"><img src="imagenes/logo.png" alt="Logotipo del proyecto" width="80" height="80"></a>
+    <a href="landing.html" title="Volver al inicio"><img src="imagenes/logo.png" alt="Logotipo del proyecto" width="80"
+        height="80"></a>
     <h1>Mi Landing Page</h1>
 
     <!-- nav agrupa la navegación; cada href="#id" salta a la sección con ese id -->
@@ -51,19 +54,36 @@
         <li><a href="#faq">Preguntas frecuentes</a></li>
         <li><a href="#contacte">Contacto</a></li>
         <!-- target="_blank" abre el enlace externo en una pestaña nueva y no se pierde nuestra página -->
-        <li><a href="https://www.w3.org" target="_blank" title="Sitio web del W3C (se abre en una pestaña nueva)">W3C</a></li>
+        <li><a href="https://www.w3.org" target="_blank"
+            title="Sitio web del W3C (se abre en una pestaña nueva)">W3C</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <div>
+      <p>Párrafo 1</p>
+      <p>Párrafo 2</p>
+    </div>
+    <p>Párrafo fuera del div</p>
 
-    <!-- ===================== INICIO ===================== -->
+    <!--Cuando dos reglas diferentes quieren dar un estilo diferente al mismo elemento.
+    los criterios son -> etiqueta < clase < id de menos a más específico.
+    si tienen el mismo peso gana el que esta más abajo en el css-->
+
+    <!--APLICAR CSS para la posición de la estructura
+    a) descendiente A B - todos los elementos B que hay dentro de A en cualquier nivel de profundidad
+    b) hijo directo A > B - solamente los B que son hijos inmediatos de A
+    c) hermano adyacente A + B - el B que va justo después de A al mismo nivel
+    
+    valores globales: inherit, initial, uset -- ejercicio 8-->
+    <!--=====================INICIO=====================-->
     <section id="inici"><!--aplicar css inline-->
       <h2 style="color:red; font-size: 25px;">Bienvenido</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <!-- la imagen es un enlace a #contacte: lleva al formulario de contacto -->
-      <a href="#contacte"><img src="imagenes/hero.jpg" alt="Imagen principal de la página" width="500" height="250" title="Ir al contacto"></a>
+      <a href="#contacte"><img src="imagenes/hero.jpg" alt="Imagen principal de la página" width="500" height="250"
+          title="Ir al contacto"></a>
     </section>
 
     <!-- ===================== SERVICIOS ===================== -->
@@ -219,14 +239,16 @@
 
       <h3>Vídeo</h3>
       <!-- preload="metadata" solo descarga la información del vídeo, no todo el fichero; el texto de dentro sale si el navegador no lo soporta -->
-      <video src="multimedia/video.mp4" width="600" controls preload="metadata" poster="imagenes/poster.jpg">Tu navegador no soporta el vídeo.</video>
+      <video src="multimedia/video.mp4" width="600" controls preload="metadata" poster="imagenes/poster.jpg">Tu
+        navegador no soporta el vídeo.</video>
 
       <h3>Audio</h3>
       <audio src="multimedia/ambient.mp3" controls>Tu navegador no soporta el audio.</audio>
 
       <h3>Mapa</h3>
       <!-- title en el iframe describe su contenido para los lectores de pantalla -->
-      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=0.60%2C41.60%2C0.65%2C41.64&amp;layer=mapnik" width="600" height="350" title="Mapa de Lleida incrustado desde OpenStreetMap"></iframe>
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=0.60%2C41.60%2C0.65%2C41.64&amp;layer=mapnik"
+        width="600" height="350" title="Mapa de Lleida incrustado desde OpenStreetMap"></iframe>
     </section>
 
     <!-- ===================== OPINIONES ===================== -->
@@ -278,37 +300,47 @@
 
           <!-- label for="nombre" se asocia al input con id="nombre": al pulsar la etiqueta se selecciona el campo -->
           <p><label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" minlength="2" maxlength="30" required></p>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" minlength="2" maxlength="30" required>
+          </p>
 
           <p><label for="apellidos">Apellidos:</label>
-          <input type="text" id="apellidos" name="apellidos" required></p>
+            <input type="text" id="apellidos" name="apellidos" required>
+          </p>
 
           <!-- pattern: 8 cifras y una letra, que es el formato de un DNI -->
           <p><label for="dni">DNI:</label>
-          <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" title="8 cifras y una letra, por ejemplo 12345678Z" required></p>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]"
+              title="8 cifras y una letra, por ejemplo 12345678Z" required>
+          </p>
 
           <p><label for="correo">Correo electrónico:</label>
-          <input type="email" id="correo" name="correo" required></p>
+            <input type="email" id="correo" name="correo" required>
+          </p>
 
           <p><label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="973 123 456" required></p>
+            <input type="tel" id="telefono" name="telefono" placeholder="973 123 456" required>
+          </p>
         </fieldset>
 
         <fieldset>
           <legend>Preferencias</legend>
 
           <p><label for="fecha">Fecha:</label>
-          <input type="date" id="fecha" name="fecha" required></p>
+            <input type="date" id="fecha" name="fecha" required>
+          </p>
 
           <p><label for="hora">Hora:</label>
-          <input type="time" id="hora" name="hora" required></p>
+            <input type="time" id="hora" name="hora" required>
+          </p>
 
           <p><label for="cantidad">Cantidad:</label>
-          <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" required></p>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" required>
+          </p>
 
           <p><label for="color">Color favorito:</label>
-          <!-- color no admite required (el HTML lo considera error) y siempre tiene un valor por defecto -->
-          <input type="color" id="color" name="color"></p>
+            <!-- color no admite required (el HTML lo considera error) y siempre tiene un valor por defecto -->
+            <input type="color" id="color" name="color">
+          </p>
 
           <!-- los tres radio comparten name="opcion": así solo se puede elegir uno -->
           <p>Opción elegida:</p>
@@ -322,24 +354,28 @@
           </p>
 
           <p><input type="checkbox" id="novedades" name="novedades" value="si" required>
-          <label for="novedades">Quiero recibir novedades</label></p>
+            <label for="novedades">Quiero recibir novedades</label>
+          </p>
 
           <p><label for="fichero">Adjunta un fichero:</label>
-          <input type="file" id="fichero" name="fichero" required></p>
+            <input type="file" id="fichero" name="fichero" required>
+          </p>
 
           <!-- la primera opción (vacía y selected) obliga a elegir; la última está desactivada (disabled) -->
           <p><label for="categoria">Categoría:</label>
-          <select id="categoria" name="categoria" required>
-            <option value="" selected>Elige una opción</option>
-            <option value="uno">Categoría 1</option>
-            <option value="dos">Categoría 2</option>
-            <option value="tres">Categoría 3</option>
-            <option value="cuatro" disabled>Categoría 4 (no disponible)</option>
-          </select></p>
+            <select id="categoria" name="categoria" required>
+              <option value="" selected>Elige una opción</option>
+              <option value="uno">Categoría 1</option>
+              <option value="dos">Categoría 2</option>
+              <option value="tres">Categoría 3</option>
+              <option value="cuatro" disabled>Categoría 4 (no disponible)</option>
+            </select>
+          </p>
         </fieldset>
 
         <p><input type="checkbox" id="terminos" name="terminos" value="si" required>
-        <label for="terminos">Acepto los términos y condiciones</label></p>
+          <label for="terminos">Acepto los términos y condiciones</label>
+        </p>
 
         <p>
           <input type="submit" value="Enviar">
@@ -354,7 +390,8 @@
     <!-- &copy; es la entidad HTML del símbolo de copyright -->
     <p>&copy; 2026 Mi Landing Page &reg; &mdash; Ivan</p>
 
-    <a href="landing.html" title="Volver al inicio"><img src="imagenes/logo.png" alt="Logotipo del proyecto" width="60" height="60"></a>
+    <a href="landing.html" title="Volver al inicio"><img src="imagenes/logo.png" alt="Logotipo del proyecto" width="60"
+        height="60"></a>
 
     <p>
       <!-- mailto: abre el cliente de correo; tel: permite llamar desde el móvil -->
@@ -367,4 +404,5 @@
   </footer>
 
 </body>
+
 </html>
