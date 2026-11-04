@@ -29,6 +29,7 @@ public class arrays_ejemplo {
 			posicion = scanN.nextInt();
 		}
 		System.out.println("El nombre en la posición " + posicion + " es: " + listaNombres[posicion]);
+
 		scanN.close();
 		scanL.close();
 	}
