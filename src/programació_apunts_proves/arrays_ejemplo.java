@@ -1,6 +1,5 @@
 package programació_apunts_proves;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class arrays_ejemplo {
@@ -30,6 +29,8 @@ public class arrays_ejemplo {
 			posicion = scanN.nextInt();
 		}
 		System.out.println("El nombre en la posición " + posicion + " es: " + listaNombres[posicion]);
+		scanN.close();
+		scanL.close();
 	}
 
 }
