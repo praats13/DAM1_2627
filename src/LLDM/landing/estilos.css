@@ -63,11 +63,6 @@ td {
     padding: 20px;
 }
 
-div {
-    color: rgb(207, 151, 112);
-    background-color: cornflowerblue;
-}
-
 main p {
     color: var(--color-primario);
 
@@ -79,4 +74,18 @@ main>section>article>p {
 
 h1+nav {
     border-top: 2px solid var(--bg-color);
+}
+
+div {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
 }

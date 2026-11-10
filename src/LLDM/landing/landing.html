@@ -9,31 +9,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Landing Page</title>
 
+
   <!-- icono de la pestaña, ruta relativa a la carpeta imagenes/ -->
   <link rel="icon" href="imagenes/logo.png" type="image/png">
 
-  <!--
-  3 Formas de aplicar css
+
+  <!-- 
   
-  1.INLINE -- en el atributo style elemento a elemento.
-  2.CSS INTERNO -- dentro de un bloque <style> dentro del <head>, solo vale para esa página.
-  3.CSS EXTERNO -- archivo .css separado enlazado con <link>, reutilizable para todas las páginas del sitio.
-  
-  <style>
-    h1 {
-      color: blue;
-    }
-    p {
-      font-size: 18px;
-      color: yellowgreen;
-    }
-  </style>
-  -->
+3 formas de aplicar un css
+
+
+1. INLINE -- A el atributo style element por elemento.
+2. CSS INTERNO -- Dentro de un bloque <style> dentro del <head>, solo vale para ese apartado.
+3. CSS EXTERNO -- Un archivo .css separado enlazado con <link>, reutilizable para todas las paginas del sitio.
+
+
+-->
+
+
   <link rel="stylesheet" href="estilos.css">
+
 
 </head>
 
 <body>
+
 
   <!-- header, main y footer: los tres bloques principales, en este orden -->
   <header>
@@ -41,6 +41,7 @@
     <a href="landing.html" title="Volver al inicio"><img src="imagenes/logo.png" alt="Logotipo del proyecto" width="80"
         height="80"></a>
     <h1>Mi Landing Page</h1>
+
 
     <!-- nav agrupa la navegación; cada href="#id" salta a la sección con ese id -->
     <nav>
@@ -60,53 +61,73 @@
     </nav>
   </header>
 
+
   <main>
     <div>
-      <p>Párrafo 1</p>
-      <p>Párrafo 2</p>
+      <p>Paragrafo 1</p>
+      <p>Paragrafo 2</p>
     </div>
-    <p>Párrafo fuera del div</p>
+    <p>Paragrafo fuera del div</p>
 
-    <!--Cuando dos reglas diferentes quieren dar un estilo diferente al mismo elemento.
-    los criterios son -> etiqueta < clase < id de menos a más específico.
-    si tienen el mismo peso gana el que esta más abajo en el css-->
 
-    <!--APLICAR CSS para la posición de la estructura
-    a) descendiente A B - todos los elementos B que hay dentro de A en cualquier nivel de profundidad
-    b) hijo directo A > B - solamente los B que son hijos inmediatos de A
-    c) hermano adyacente A + B - el B que va justo después de A al mismo nivel
-    
-    valores globales: inherit, initial, uset -- ejercicio 8-->
-    <!--=====================INICIO=====================-->
-    <section id="inici"><!--aplicar css inline-->
-      <h2 style="color:red; font-size: 25px;">Bienvenido</h2>
+    <!-- 
+    Cuando dos reglas diferentes quieren dar un estilo diferente al mismo elemento, 
+    los criterios son -> etiqueta < classe < id
+    de mas especifico a menos especifico
+    si tienen el mismo peso gana la que esta mas abajo en el documento css
+    -->
+
+
+    <!-- 
+    APLICAR CSS para la posicion de la estrutura
+    a (descendiente A B - todos los elementos B que hay dentro de A en cualquier nivel
+    de profundidad)
+    b (hijo directo A > B - solo los B que son hijos inmediatos de A)
+    c (genera adyacente A + B- el B que va justo despues de A al mismo nivel)
+    -->
+
+
+    <!-- 
+    Valores globales: 
+    inherit, initial, uset -- ej: 8
+    -->
+
+
+    <!-- ===================== INICIO ===================== -->
+    <section id="inici"> <!-- Aplicar css inline -->
+      <h2 style="color: orangered; font-size: 25px;">Bienvenido</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <!-- la imagen es un enlace a #contacte: lleva al formulario de contacto -->
       <a href="#contacte"><img src="imagenes/hero.jpg" alt="Imagen principal de la página" width="500" height="250"
           title="Ir al contacto"></a>
     </section>
 
+
     <!-- ===================== SERVICIOS ===================== -->
     <section class="serveis" id="serveis">
       <h2>Servicios</h2>
 
-      <!-- article: cada tarjeta es un contenido independiente; dentro de una section con h2 su título es h3 -->
-      <article class="card">
-        <h3>Servicio 1</h3>
-        <img src="imagenes/servei1.jpg" alt="Imagen del servicio 1" width="300" height="200">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </article>
-      <article class="card">
-        <h3>Servicio 2</h3>
-        <img src="imagenes/servei2.jpg" alt="Imagen del servicio 2" width="300" height="200">
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </article>
-      <article class="card">
-        <h3>Servicio 3</h3>
-        <img src="imagenes/servei3.jpg" alt="Imagen del servicio 3" width="300" height="200">
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      </article>
 
+      <div>
+        <!-- Acivar flexbox, añadir propiedades para que las tarjetas puedan pasar a una linea nueva y que quede un espacio uniforme entre ellas-->
+        <!-- .card añadir la propiedad flexbox (con 3 valores) para que cada tarjeta tenga una width de 250px de base pero que pueda crecer / encojerse para repartir el espacio -->
+        <!-- article: cada tarjeta es un contenido independiente; dentro de una section con h2 su título es h3 -->
+        <article class="card">
+          <h3>Servicio 1</h3>
+          <img src="imagenes/servei1.jpg" alt="Imagen del servicio 1" width="300" height="200">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article class="card">
+          <h3>Servicio 2</h3>
+          <img src="imagenes/servei2.jpg" alt="Imagen del servicio 2" width="300" height="200">
+          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article class="card">
+          <h3>Servicio 3</h3>
+          <img src="imagenes/servei3.jpg" alt="Imagen del servicio 3" width="300" height="200">
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </article>
+      </div>
       <h3>Características</h3>
       <!-- la sublista va DENTRO de un li, no directamente dentro del ul: así el HTML es válido -->
       <ul>
@@ -120,6 +141,7 @@
         <li>Ut labore et dolore</li>
       </ul>
 
+
       <h3>Cómo funciona</h3>
       <!-- ol porque el orden de los pasos importa -->
       <ol>
@@ -128,6 +150,7 @@
         <li>Sed do eiusmod tempor.</li>
         <li>Incididunt ut labore.</li>
       </ol>
+
 
       <h3>Glosario</h3>
       <!-- dl/dt/dd: lista de definiciones, ideal para un glosario -->
@@ -141,9 +164,11 @@
       </dl>
     </section>
 
+
     <!-- ===================== PRECIOS ===================== -->
     <section id="preus">
       <h2>Precios</h2>
+
 
       <article>
         <h3>Plan 1</h3>
@@ -160,6 +185,7 @@
         <img src="imagenes/pla3.jpg" alt="Imagen del plan 3" width="300" height="200">
         <p>30 &euro; al mes.</p>
       </article>
+
 
       <h3>Comparativa de planes</h3>
       <table>
@@ -207,9 +233,11 @@
       </table>
     </section>
 
+
     <!-- ===================== GALERÍA ===================== -->
     <section id="galeria">
       <h2>Galería</h2>
+
 
       <figure>
         <!-- picture: el navegador elige el primer formato que soporta (avif, luego webp, y si no png) -->
@@ -222,10 +250,12 @@
         <figcaption>Fig. 1: Lorem ipsum dolor sit amet.</figcaption>
       </figure>
 
+
       <figure>
         <img src="imagenes/galeria2.jpg" alt="Imagen de ejemplo de la galería número dos" width="600" height="400">
         <figcaption>Fig. 2: Consectetur adipiscing elit.</figcaption>
       </figure>
+
 
       <figure>
         <img src="imagenes/galeria3.jpg" alt="Imagen de ejemplo de la galería número tres" width="600" height="400">
@@ -233,17 +263,21 @@
       </figure>
     </section>
 
+
     <!-- ===================== MULTIMEDIA ===================== -->
     <section id="multimedia">
       <h2>Multimedia</h2>
+
 
       <h3>Vídeo</h3>
       <!-- preload="metadata" solo descarga la información del vídeo, no todo el fichero; el texto de dentro sale si el navegador no lo soporta -->
       <video src="multimedia/video.mp4" width="600" controls preload="metadata" poster="imagenes/poster.jpg">Tu
         navegador no soporta el vídeo.</video>
 
+
       <h3>Audio</h3>
       <audio src="multimedia/ambient.mp3" controls>Tu navegador no soporta el audio.</audio>
+
 
       <h3>Mapa</h3>
       <!-- title en el iframe describe su contenido para los lectores de pantalla -->
@@ -251,9 +285,11 @@
         width="600" height="350" title="Mapa de Lleida incrustado desde OpenStreetMap"></iframe>
     </section>
 
+
     <!-- ===================== OPINIONES ===================== -->
     <section id="opinions">
       <h2>Opiniones</h2>
+
 
       <!-- blockquote con cite (URL de la fuente) y dentro el nombre de quien lo dice con la etiqueta cite -->
       <blockquote cite="https://ejemplo.com/opiniones/1">
@@ -265,13 +301,16 @@
         <p>&mdash; <cite>Cliente Dos</cite></p>
       </blockquote>
 
+
       <!-- q es la cita corta en medio de la frase; el navegador le pone las comillas -->
       <p>Como dice un usuario, <q>lorem ipsum dolor sit amet</q>, y no le falta razón.</p>
     </section>
 
+
     <!-- ===================== FAQ ===================== -->
     <section id="faq">
       <h2>Preguntas frecuentes</h2>
+
 
       <!-- details/summary: bloque desplegable, summary es el título que siempre se ve -->
       <details>
@@ -289,23 +328,29 @@
       </details>
     </section>
 
+
     <!-- ===================== CONTACTO ===================== -->
     <section id="contacte">
       <h2>Contacto</h2>
 
+
       <form action="#" method="post">
+
 
         <fieldset>
           <legend>Datos personales</legend>
+
 
           <!-- label for="nombre" se asocia al input con id="nombre": al pulsar la etiqueta se selecciona el campo -->
           <p><label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" minlength="2" maxlength="30" required>
           </p>
 
+
           <p><label for="apellidos">Apellidos:</label>
             <input type="text" id="apellidos" name="apellidos" required>
           </p>
+
 
           <!-- pattern: 8 cifras y una letra, que es el formato de un DNI -->
           <p><label for="dni">DNI:</label>
@@ -313,34 +358,42 @@
               title="8 cifras y una letra, por ejemplo 12345678Z" required>
           </p>
 
+
           <p><label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" required>
           </p>
+
 
           <p><label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="973 123 456" required>
           </p>
         </fieldset>
 
+
         <fieldset>
           <legend>Preferencias</legend>
+
 
           <p><label for="fecha">Fecha:</label>
             <input type="date" id="fecha" name="fecha" required>
           </p>
 
+
           <p><label for="hora">Hora:</label>
             <input type="time" id="hora" name="hora" required>
           </p>
+
 
           <p><label for="cantidad">Cantidad:</label>
             <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" required>
           </p>
 
+
           <p><label for="color">Color favorito:</label>
             <!-- color no admite required (el HTML lo considera error) y siempre tiene un valor por defecto -->
             <input type="color" id="color" name="color">
           </p>
+
 
           <!-- los tres radio comparten name="opcion": así solo se puede elegir uno -->
           <p>Opción elegida:</p>
@@ -353,13 +406,16 @@
             <label for="opcion-c">Opción C</label>
           </p>
 
+
           <p><input type="checkbox" id="novedades" name="novedades" value="si" required>
             <label for="novedades">Quiero recibir novedades</label>
           </p>
 
+
           <p><label for="fichero">Adjunta un fichero:</label>
             <input type="file" id="fichero" name="fichero" required>
           </p>
+
 
           <!-- la primera opción (vacía y selected) obliga a elegir; la última está desactivada (disabled) -->
           <p><label for="categoria">Categoría:</label>
@@ -373,9 +429,11 @@
           </p>
         </fieldset>
 
+
         <p><input type="checkbox" id="terminos" name="terminos" value="si" required>
           <label for="terminos">Acepto los términos y condiciones</label>
         </p>
+
 
         <p>
           <input type="submit" value="Enviar">
@@ -384,14 +442,18 @@
       </form>
     </section>
 
+
   </main>
+
 
   <footer>
     <!-- &copy; es la entidad HTML del símbolo de copyright -->
     <p>&copy; 2026 Mi Landing Page &reg; &mdash; Ivan</p>
 
+
     <a href="landing.html" title="Volver al inicio"><img src="imagenes/logo.png" alt="Logotipo del proyecto" width="60"
         height="60"></a>
+
 
     <p>
       <!-- mailto: abre el cliente de correo; tel: permite llamar desde el móvil -->
@@ -402,6 +464,7 @@
       <a href="#inici">Volver arriba</a>
     </p>
   </footer>
+
 
 </body>
 
