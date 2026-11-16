@@ -1,0 +1,11 @@
+.primera p {
+    color: red;
+}
+
+.segunda>p {
+    color: blue;
+}
+
+div>p {
+    color: green;
+}

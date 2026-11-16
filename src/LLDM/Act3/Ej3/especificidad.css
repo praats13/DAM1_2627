@@ -1,0 +1,14 @@
+#unico {
+    color: red;
+    font-size: 24px;
+}
+
+.destacado {
+    color: green;
+    font-weight: bold;
+}
+
+p {
+    color: blue;
+    font-size: 16px;
+}
