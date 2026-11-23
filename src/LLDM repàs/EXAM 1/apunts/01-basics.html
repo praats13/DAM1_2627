@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  ^ Line 1 ALWAYS. Tells the browser "this is modern HTML (HTML5)".
+  This grey text is a COMMENT. The browser ignores it. Write it like this:  <!- - text - ->  (without spaces)
+-->
+
+<html lang="en">
+<!-- <html> wraps EVERYTHING. lang = the language of the page. -->
+
+<head>
+    <!-- HEAD = info ABOUT the page. Nothing here is shown on the page itself. -->
+    <meta charset="UTF-8"> <!-- So accents/ñ/€ show correctly -->
+    <title>My first page</title> <!-- Text on the browser TAB -->
+</head>
+
+<body>
+    <!-- BODY = everything the user SEES. -->
+
+    <h1>Main title (only one per page)</h1>
+    <h2>Subtitle</h2>
+    <h3>Smaller subtitle</h3>
+    <!-- h1 is biggest ... h6 is smallest -->
+
+    <p>This is a paragraph. <b>bold</b>, <i>italic</i>, <strong>important</strong>, <em>emphasis</em>.</p>
+
+    <p>Line one<br>Line two</p>
+    <!-- <br> = line break. It has NO closing tag (it's "empty"). -->
+
+    <hr>
+    <!-- <hr> = horizontal line. Also empty, no closing tag. -->
+
+    <a href="https://www.google.com">This is a link</a>
+    <!-- a = anchor (link). href = WHERE it goes. -->
+
+    <br>
+
+    <img src="photo.jpg" alt="Description of the photo" width="200">
+    <!-- img = image. src = the file. alt = text if the image fails (REQUIRED!). Empty tag, no closing. -->
+
+</body>
+
+</html>
+
+<!--
+  =================  SUMMARY  =================
+  STRUCTURE (memorize the shape):
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>...</title>
+    </head>
+    <body>
+      ...visible stuff...
+    </body>
+  </html>
+
+  EMPTY TAGS (never closed): <br> <hr> <img> <input> <meta>
+  Everything else: open AND close.
+-->

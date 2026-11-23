@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lists</title>
+</head>
+
+<body>
+
+    <!--
+    MEMORY TRICK:
+      ul = Unordered List  → bullets  •
+      ol = Ordered List    → numbers  1. 2. 3.
+      li = List Item       → each line (ALWAYS inside ul or ol)
+  -->
+
+    <h2>Unordered list (ul) — shopping</h2>
+    <ul>
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+
+    <h2>Ordered list (ol) — steps</h2>
+    <ol>
+        <li>Wake up</li>
+        <li>Study HTML</li>
+        <li>Pass the exam</li>
+    </ol>
+
+    <h2>Ordered list with letters / roman / starting at 5</h2>
+    <ol type="A"> <!-- A, B, C -->
+        <li>First</li>
+        <li>Second</li>
+    </ol>
+    <ol type="i"> <!-- i, ii, iii -->
+        <li>First</li>
+        <li>Second</li>
+    </ol>
+    <ol start="5"> <!-- 5, 6, 7 -->
+        <li>Five</li>
+        <li>Six</li>
+    </ol>
+    <!-- type options: "1" (default) "A" "a" "I" "i" -->
+
+    <h2>Nested list (list inside a list)</h2>
+    <ul>
+        <li>Fruits
+            <ul> <!-- the new list goes INSIDE the <li>, before </li> -->
+                <li>Apple</li>
+                <li>Banana</li>
+            </ul>
+        </li> <!-- now close the "Fruits" li -->
+        <li>Vegetables
+            <ol>
+                <li>Carrot</li>
+                <li>Lettuce</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h2>Bonus: description list (dl) — in case they ask</h2>
+    <dl>
+        <dt>HTML</dt> <!-- dt = the term -->
+        <dd>Language to build web pages</dd> <!-- dd = the description -->
+        <dt>CSS</dt>
+        <dd>Language to style web pages</dd>
+    </dl>
+
+    <!--
+    TYPICAL EXAM ERRORS WITH LISTS:
+      ❌ <li> outside a <ul>/<ol>
+      ❌ <ul><p>Milk</p></ul>        → inside ul/ol only <li> is allowed
+      ❌ Nested list placed AFTER </li> instead of inside it
+      ❌ Opening <ul> and closing </ol>
+  -->
+
+</body>
+
+</html>

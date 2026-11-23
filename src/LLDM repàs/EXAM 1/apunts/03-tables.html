@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tables</title>
+    <style>
+        /* Only so you can SEE the cells. Not needed for the exam unless they ask. */
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+    MEMORY TRICK — the 4 table tags:
+      table = the whole table
+      tr    = Table Row        (a row →  horizontal)
+      th    = Table Header     (title cell, bold & centered)
+      td    = Table Data       (normal cell)
+
+    A table is built ROW BY ROW. Each <tr> contains its cells (<th> or <td>).
+    You can also add border="1" to <table> to see the lines (old way, many teachers accept it).
+  -->
+
+    <h2>1. Simple table</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Luis</td>
+            <td>22</td>
+        </tr>
+    </table>
+
+
+    <!--
+    ============== COLSPAN & ROWSPAN ==============
+    colspan = cell is WIDER   → takes several COLUMNS   (stretches → right)
+    rowspan = cell is TALLER  → takes several ROWS      (stretches ↓ down)
+
+    TRICK:  COL = ←→ sideways     ROW = ↓ down
+
+    THE GOLDEN RULE:
+      If a cell takes extra space, you must DELETE cells to make room.
+      - colspan="2" → that row has 1 cell LESS.
+      - rowspan="2" → the NEXT row has 1 cell LESS (the space is already taken from above).
+  -->
+
+    <h2>2. colspan — "Personal data" covers 2 columns</h2>
+    <table border="1">
+        <tr>
+            <th colspan="2">Personal data</th> <!-- 1 cell that counts as 2 -->
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Ana</td>
+        </tr>
+    </table>
+    <!-- Count: row 1 = 2 (colspan) ✔   row 2 = 1 + 1 = 2 ✔   All rows = 2 columns. -->
+
+
+    <h2>3. rowspan — "Monday" covers 2 rows</h2>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td> <!-- goes down into the next row too -->
+            <td>Math</td>
+        </tr>
+        <tr>
+            <!-- NO "day" cell here! Monday is already occupying this space. -->
+            <td>HTML</td>
+        </tr>
+    </table>
+
+
+    <h2>4. Both together (typical exam table)</h2>
+    <!--
+    Draw it first on paper! Grid of 4 columns:
+
+    +-------------+---------------------------+
+    |             |        Grades (3 cols)    |
+    |  Student    +--------+--------+---------+
+    |  (2 rows)   |  Exam1 |  Exam2 |  Final  |
+    +-------------+--------+--------+---------+
+    |  Ana        |   7    |   8    |   7.5   |
+    +-------------+--------+--------+---------+
+    |  Luis       |   5    |   6    |   5.5   |
+    +-------------+--------+--------+---------+
+    |  Average (4 cols)                       |
+    +-----------------------------------------+
+  -->
+    <table border="1">
+        <tr>
+            <th rowspan="2">Student</th> <!-- 1 col, goes down 2 rows -->
+            <th colspan="3">Grades</th> <!-- 3 cols.  Total row: 1 + 3 = 4 ✔ -->
+        </tr>
+        <tr>
+            <!-- "Student" is already here from above, so only 3 cells: 3 + 1 (from rowspan) = 4 ✔ -->
+            <th>Exam 1</th>
+            <th>Exam 2</th>
+            <th>Final</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>7</td>
+            <td>8</td>
+            <td>7.5</td> <!-- 4 ✔ -->
+        </tr>
+        <tr>
+            <td>Luis</td>
+            <td>5</td>
+            <td>6</td>
+            <td>5.5</td> <!-- 4 ✔ -->
+        </tr>
+        <tr>
+            <td colspan="4">Average: 6.5</td> <!-- 4 ✔ -->
+        </tr>
+    </table>
+
+
+    <h2>5. Bonus: full structure (thead / tbody / tfoot / caption)</h2>
+    <!-- If the teacher wants it "organized". Optional, but looks good. -->
+    <table border="1">
+        <caption>Price list</caption> <!-- title of the table, right after <table> -->
+        <thead> <!-- header rows -->
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody> <!-- data rows -->
+            <tr>
+                <td>Pen</td>
+                <td>1€</td>
+            </tr>
+            <tr>
+                <td>Book</td>
+                <td>15€</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- footer row (totals) -->
+            <tr>
+                <td>Total</td>
+                <td>16€</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!--
+    HOW TO NEVER FAIL A TABLE:
+      1. Draw it on paper as a grid.
+      2. Count how many columns the full table has (e.g. 4).
+      3. Write it row by row.
+      4. For EVERY row, count: normal cells + colspans + cells "coming down" from a rowspan above.
+         Every row must give the SAME number.
+
+    TYPICAL ERRORS:
+      ❌ <td> directly inside <table> without <tr>
+      ❌ Forgetting to delete a cell after colspan/rowspan (row has too many cells)
+      ❌ colspan=2 without quotes / "colspam" / "rowspam" misspelled
+      ❌ Writing "colspan" on <tr> instead of <td>/<th>
+  -->
+
+</body>
+
+</html>

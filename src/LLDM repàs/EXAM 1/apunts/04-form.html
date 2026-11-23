@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+</head>
+
+<body>
+
+    <!--
+    A full page usually has these "zones" (semantic tags = tags with meaning):
+
+      <header>  → top of page: logo, main title
+      <nav>     → menu of links (the "index")
+      <main>    → the main content
+      <section> → a part of the content
+      <footer>  → bottom of page: copyright, contact
+
+    They look like nothing special in the browser — they just ORGANIZE the code.
+    If your exam says "index", it's most likely the <nav> menu (a list of links).
+  -->
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <nav>
+        <!-- A menu = an unordered list of links. Very common! -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- href="#form" jumps to the element with id="form" on this page -->
+    </nav>
+
+    <main>
+        <section id="form">
+            <h2>Sign up</h2>
+
+            <!--
+        <form> wraps ALL the inputs.
+          action = where the data is sent (a file/URL)
+          method = "get" (data visible in URL) or "post" (hidden, use for passwords)
+      -->
+            <form action="send.php" method="post">
+
+                <!--
+          LABEL + INPUT always go in pairs:
+            label for="X"  ←→  input id="X"     (same word! clicking the label focuses the input)
+            name = the name the data is sent with (REQUIRED to send data)
+        -->
+
+                <!-- fieldset = a box grouping fields. legend = the title of the box -->
+                <fieldset>
+                    <legend>Personal data</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="pass">
+                    <br><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="0" max="120">
+                    <br><br>
+
+                    <label for="birth">Birth date:</label>
+                    <input type="date" id="birth" name="birth">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <!-- RADIO = choose ONLY ONE. All options share the SAME name. -->
+                    <p>Gender:</p>
+                    <input type="radio" id="m" name="gender" value="male">
+                    <label for="m">Male</label>
+                    <input type="radio" id="f" name="gender" value="female">
+                    <label for="f">Female</label>
+                    <input type="radio" id="o" name="gender" value="other">
+                    <label for="o">Other</label>
+
+                    <!-- CHECKBOX = choose MANY. -->
+                    <p>Hobbies:</p>
+                    <input type="checkbox" id="h1" name="hobbies" value="sports">
+                    <label for="h1">Sports</label>
+                    <input type="checkbox" id="h2" name="hobbies" value="music" checked>
+                    <label for="h2">Music</label>
+                    <!-- checked = selected by default -->
+
+                    <br><br>
+
+                    <!-- SELECT = dropdown menu -->
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="es">Spain</option>
+                        <option value="fr">France</option>
+                        <option value="it" selected>Italy</option> <!-- selected = chosen by default -->
+                    </select>
+
+                    <br><br>
+
+                    <!-- TEXTAREA = big text box. HAS a closing tag (unlike input)! -->
+                    <label for="msg">Comments:</label><br>
+                    <textarea id="msg" name="msg" rows="4" cols="40"></textarea>
+                </fieldset>
+
+                <br>
+
+                <!-- BUTTONS -->
+                <input type="submit" value="Send"> <!-- sends the form -->
+                <input type="reset" value="Clear"> <!-- empties the form -->
+                <!-- also valid: <button type="submit">Send</button> -->
+
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 My Website — Contact: info@mywebsite.com</p>
+        <!-- &copy; = the © symbol -->
+    </footer>
+
+    <!--
+    INPUT TYPES TO REMEMBER:
+      text, email, password, number, date, radio, checkbox, submit, reset
+      (also: tel, url, color, range, file, hidden)
+
+    USEFUL ATTRIBUTES:
+      required    → can't be left empty
+      placeholder → grey hint text inside
+      value       → the value sent / text on button
+      checked     → radio/checkbox pre-selected
+      selected    → option pre-selected
+      min / max   → limits for number/date
+      maxlength   → max characters for text
+
+    TYPICAL ERRORS:
+      ❌ <input ...></input>        → input is EMPTY, no closing tag
+      ❌ <textarea ... />           → textarea DOES need </textarea>
+      ❌ label for="name" but input id="nombre" → they must match
+      ❌ radio buttons with different names → you can select all of them
+      ❌ input without name → data is not sent
+      ❌ <option> outside <select>
+      ❌ type="mail" instead of type="email"
+  -->
+
+</body>
+
+</html>
