@@ -1,0 +1,31 @@
+/* Estilos generales de los campos */
+input {
+    display: block;
+    margin: 8px 0 20px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+/* Borde rojo cuando el campo no cumple la validación */
+input:invalid {
+    border-color: red;
+}
+
+/* Borde verde cuando el campo es válido */
+input:valid {
+    border-color: green;
+}
+
+/* Estilos del botón */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* El campo de correo sigue rojo si la dirección está incompleta porque
+type="email" comprueba que tenga un formato de correo válido, incluida la @. */

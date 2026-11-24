@@ -1,0 +1,31 @@
+/* Estilos generales de las barras */
+.barra {
+    width: 400px;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* Estilo común de las barras interiores */
+.progreso {
+    height: 100%;
+    background-color: green;
+}
+
+/* Diferentes porcentajes de progreso */
+.porcentaje25 {
+    width: 25%;
+}
+
+.porcentaje50 {
+    width: 50%;
+}
+
+.porcentaje75 {
+    width: 75%;
+}
+
+/* El porcentaje se calcula respecto al ancho de la barra exterior,
+   no respecto al ancho de la pantalla. */

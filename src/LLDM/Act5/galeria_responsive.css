@@ -1,0 +1,23 @@
+/* Estilos generales de la galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Las imágenes ocupan todo el ancho disponible */
+.galeria img {
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/* En pantallas pequeñas aparecen dos imágenes por fila */
+@media (max-width: 600px) {
+    .galeria img {
+        width: calc(50% - 20px);
+    }
+}
+
+/* La media query cambia el ancho de las imágenes cuando la pantalla mide menos de 600px.
+El meta viewport permite que el navegador adapte la página al ancho real del dispositivo. */

@@ -1,0 +1,40 @@
+/* Creamos una cuadrícula de tres columnas iguales */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Estilos comunes para todos los elementos */
+.contenedor div {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Damos un color diferente a cada elemento */
+.contenedor div:nth-child(1) {
+    background-color: lightblue;
+}
+
+.contenedor div:nth-child(2) {
+    background-color: lightgreen;
+}
+
+.contenedor div:nth-child(3) {
+    background-color: lightcoral;
+}
+
+.contenedor div:nth-child(4) {
+    background-color: lightyellow;
+}
+
+.contenedor div:nth-child(5) {
+    background-color: plum;
+}
+
+.contenedor div:nth-child(6) {
+    background-color: lightsalmon;
+}
+
+/* Se crean dos filas automáticamente porque hay seis elementos y tres columnas.
+La unidad fr reparte el espacio disponible en partes iguales entre las columnas. */

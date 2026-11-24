@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con validación</title>
+    <link rel="stylesheet" href="formulario_validacion.css">
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+
+    <form>
+        <!-- Campo de texto obligatorio -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Campo de correo obligatorio con validación automática -->
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

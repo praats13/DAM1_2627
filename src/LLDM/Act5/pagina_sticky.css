@@ -1,0 +1,37 @@
+
+/* Barra de navegación que permanece arriba al hacer scroll */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 15px;
+    z-index: 1000;
+}
+
+/* Enlaces de navegación */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+/* Efecto al pasar el ratón */
+nav a:hover {
+    background-color: #666;
+}
+
+/* Estilos de las secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    min-height: 350px;
+    scroll-margin-top: 70px;
+}
+
+/* scroll-margin-top evita que los títulos queden tapados
+   por la barra al navegar mediante los enlaces de anclaje. */
+
+/* Diferencia:
+   sticky se pega al llegar a una posición durante el scroll,
+   mientras que fixed permanece siempre fijo respecto a la ventana. */

@@ -1,0 +1,24 @@
+/* Centramos la tarjeta en la página */
+.tarjeta {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Añadimos bordes redondeados y una sombra */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    /* Centramos el contenido de la tarjeta */
+    text-align: center;
+}
+
+/* Ajustamos el tamaño de la imagen */
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Si la imagen es un elemento en línea, text-align: center también la centra.
+Si fuera un elemento de bloque, utilizaría margin: 0 auto para centrarla. */

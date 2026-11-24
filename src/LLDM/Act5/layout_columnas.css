@@ -1,0 +1,28 @@
+/* Estilos del contenedor principal */
+.contenedor {
+    border: 2px solid black;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Las columnas flotan a la izquierda */
+.columna {
+    float: left;
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Fondo gris para la primera columna */
+.columna1 {
+    background-color: lightgray;
+}
+
+/* Fondo blanco para la segunda columna */
+.columna2 {
+    background-color: white;
+}
+
+/* El margen hacía que las columnas superaran el 100% del ancho.
+Se ha solucionado utilizando calc() para ajustar el ancho y overflow: hidden para que el contenedor envuelva las columnas. */

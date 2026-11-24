@@ -1,0 +1,28 @@
+/* Contenedor de las imágenes */
+.galeria {
+    display: flex;
+    gap: 20px;
+}
+
+/* Cada imagen tiene un tamaño fijo y oculta lo que sobresale */
+.imagen {
+    width: 250px;
+    overflow: hidden;
+}
+
+/* Estilos y transición de las imágenes */
+.imagen img {
+    width: 250px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Efecto al pasar el ratón por encima */
+.imagen img:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/* La transición se coloca en el estado normal para que el efecto sea suave
+tanto al entrar con el ratón como al salir. */
